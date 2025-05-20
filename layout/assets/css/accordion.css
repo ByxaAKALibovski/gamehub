@@ -1,0 +1,52 @@
+.accordion {
+    background-color: transparent;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.accordion:not(.active):hover {
+    color: #FBBB43;
+    border-color: #FBBB43;
+}
+
+.active{
+    background-color: #FBBB43;
+    color: #101015;
+    border: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #FBBB43;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0 0 10px 10px;
+
+    & p{
+        margin-bottom: 30px;
+    }
+}
